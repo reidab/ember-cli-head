@@ -79,6 +79,16 @@ module.exports = {
           'ember-source': null
         }
       }
+    },
+    {
+      name: 'fastboot-beta',
+      command: 'ember fastboot:test',
+      npm: {
+        devDependencies: {
+          'ember-source': null,
+          "ember-cli-fastboot": "1.1.4-beta.1",
+        }
+      }
     }
   ]
 };
