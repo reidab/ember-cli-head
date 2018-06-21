@@ -17,6 +17,7 @@ describe('FastBoot 1.0', function() {
         expect(response.statusCode).to.equal(200);
         expect($('h1').text().trim()).to.equal('Hello page');
         expect($('meta[property="og:title"]', 'head').attr('content')).to.equal('Hello page');
+        expect($('meta[property="og:title"]', 'body').length).to.equal(0);
       });
   });
 
@@ -29,6 +30,7 @@ describe('FastBoot 1.0', function() {
         expect(response.statusCode).to.equal(200);
         expect($('h1').text().trim()).to.equal('Other page');
         expect($('meta[property="og:title"]', 'head').attr('content')).to.equal('Other page');
+        expect($('meta[property="og:title"]', 'body').length).to.equal(0);
       });
   });
 
